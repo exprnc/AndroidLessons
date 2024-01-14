@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/centerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="#FF8800"
+        app:layout_constraintBottom_toTopOf="@id/centerButton"
+        app:layout_constraintEnd_toEndOf="@id/centerButton"
+        app:layout_constraintStart_toStartOf="@id/centerButton" />
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="#FF8800"
+        app:layout_constraintEnd_toEndOf="@id/centerButton"
+        app:layout_constraintStart_toStartOf="@id/centerButton"
+        app:layout_constraintTop_toBottomOf="@id/centerButton" />
+
+    <View
+        android:id="@+id/leftView"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FF8800"
+        app:layout_constraintBottom_toBottomOf="@id/centerButton"
+        app:layout_constraintEnd_toStartOf="@id/centerButton"
+        app:layout_constraintTop_toTopOf="@id/centerButton" />
+
+    <View
+        android:id="@+id/rightView"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:background="#FF8800"
+        app:layout_constraintBottom_toBottomOf="@id/centerButton"
+        app:layout_constraintStart_toEndOf="@id/centerButton"
+        app:layout_constraintTop_toTopOf="@id/centerButton" />
+
+    <TextView
+        android:id="@+id/topLeftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Top Left"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/leftView"
+        app:layout_constraintTop_toTopOf="@id/topView" />
+
+    <TextView
+        android:id="@+id/topRightView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Top Right"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/rightView"
+        app:layout_constraintTop_toTopOf="@id/topView" />
+
+    <TextView
+        android:id="@+id/bottomLeftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Bottom Left"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/leftView" />
+
+    <TextView
+        android:id="@+id/bottomRightView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Bottom Right"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/rightView" />
+
+    <TextView
+        android:id="@+id/topLeftParentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Top Left Parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topRightParentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Top Right Parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bottomLeftParentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Bottom Left Parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bottomRightParentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="Bottom Right Parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Between 2 Views"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/topRightParentView"
+        app:layout_constraintStart_toEndOf="@id/topLeftParentView"
+        app:layout_constraintTop_toBottomOf="@id/topLeftParentView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="@android:color/white"
+        android:background="#8844EE"
+        android:text="Centered Between \n4 Views"
+        app:layout_constraintStart_toStartOf="@id/bottomLeftView"
+        app:layout_constraintEnd_toEndOf="@id/bottomRightView"
+        app:layout_constraintTop_toBottomOf="@id/bottomLeftView"
+        app:layout_constraintBottom_toTopOf="@id/bottomLeftParentView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

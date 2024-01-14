@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3">
+
+    <TextView
+        android:background="#FF8888"
+        android:padding="6dp"
+        android:text="111" />
+
+    <TextView
+        android:background="#88FF88"
+        android:padding="6dp"
+        android:text="222"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="end"/>
+
+    <TextView
+        android:background="#8888FF"
+        android:padding="6dp"
+        android:text="333" />
+
+    <TextView
+        android:background="#FF8888"
+        android:padding="6dp"
+        android:text="444"
+        android:layout_gravity="top"/>
+
+    <TextView
+        android:background="#FFFF88"
+        android:padding="40dp"
+        android:text="555" />
+
+    <TextView
+        android:background="#88FFFF"
+        android:padding="6dp"
+        android:text="666"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:background="#FF88FF"
+        android:padding="6dp"
+        android:text="777" />
+
+    <TextView
+        android:background="#0088FF"
+        android:padding="6dp"
+        android:text="888" />
+
+    <TextView
+        android:background="#FF8844"
+        android:padding="6dp"
+        android:text="999" />
+
+</GridLayout>

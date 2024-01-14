@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/randomImageView"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:contentDescription="@string/contentDescription"
+        android:scaleType="centerCrop"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/getRandomImageButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/buttonText"
+        app:layout_constraintEnd_toEndOf="@id/randomImageView"
+        app:layout_constraintStart_toStartOf="@id/randomImageView"
+        app:layout_constraintTop_toBottomOf="@id/randomImageView"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <RadioGroup
+        android:id="@+id/keywordRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/randomRadioButton"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/getRandomImageButton"
+        app:layout_constraintStart_toStartOf="@id/getRandomImageButton"
+        app:layout_constraintTop_toBottomOf="@id/useKeywordSwitch">
+
+        <RadioButton
+            android:id="@+id/randomRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random" />
+
+        <RadioButton
+            android:id="@+id/spaceRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Space" />
+
+        <RadioButton
+            android:id="@+id/architectureRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Architecture" />
+
+        <RadioButton
+            android:id="@+id/waterRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water" />
+
+        <RadioButton
+            android:id="@+id/animalsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animals" />
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/useKeywordSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Use keyword"
+        app:layout_constraintStart_toStartOf="@id/getRandomImageButton"
+        app:layout_constraintTop_toBottomOf="@id/getRandomImageButton" />
+
+    <EditText
+        android:id="@+id/keywordEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter image keyword"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/getRandomImageButton"
+        app:layout_constraintStart_toStartOf="@id/getRandomImageButton"
+        app:layout_constraintTop_toBottomOf="@id/useKeywordSwitch" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/randomImageView"
+        app:layout_constraintEnd_toEndOf="@id/randomImageView"
+        app:layout_constraintStart_toStartOf="@id/randomImageView"
+        app:layout_constraintTop_toTopOf="@id/randomImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
