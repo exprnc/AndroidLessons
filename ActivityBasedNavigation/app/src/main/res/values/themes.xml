@@ -30,4 +30,22 @@
         <item name="android:paddingBottom">16dp</item>>
     </style>
 
+    <style name="FormHintTextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DefaultSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">true</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:minWidth">180dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
 </resources>

@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="form_stroke">#DFE5F0</color>
+    <color name="edit_text_enabled">#232323</color>
+    <color name="edit_text_disabled">#9a9a9a</color>
 </resources>

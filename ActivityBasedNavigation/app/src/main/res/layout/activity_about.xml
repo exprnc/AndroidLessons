@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/begin_guideline"
@@ -20,8 +21,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/about_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@style/Form"
         app:layout_constraintStart_toStartOf="@id/begin_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
@@ -30,8 +29,81 @@
 
         <TextView
             android:id="@+id/title_text_view"
-            android:layout_width=""
-            android:layout_height=""
+            android:text="About the application"
+            style="@style/FormHintTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/name_hint_text_view"
+            style="@style/HintTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Application Name:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+        <TextView
+            android:id="@+id/version_hint_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/HintTextView"
+            android:text="Version Name:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_hint_text_view"/>
+        
+        <TextView
+            android:id="@+id/version_code_hint_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/HintTextView"
+            android:text="Version Code:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/version_hint_text_view"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="version_code_hint_text_view, name_hint_text_view, version_hint_text_view"/>
+
+        <TextView
+            style="@style/HintTextView.Value"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/barrier"
+            app:layout_constraintBaseline_toBaselineOf="@id/name_hint_text_view"/>
+        
+        <TextView
+            android:id="@+id/version_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HintTextView.Value"
+            tools:text="1.0.0"
+            app:layout_constraintStart_toStartOf="@id/barrier"
+            app:layout_constraintBaseline_toBaselineOf="@id/version_hint_text_view"/>
+        
+        <TextView
+            android:id="@+id/version_code_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HintTextView.Value"
+            tools:text="1"
+            app:layout_constraintStart_toStartOf="@id/barrier"
+            app:layout_constraintBaseline_toBaselineOf="@id/version_code_hint_text_view"/>
+        
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="OK"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/version_code_hint_text_view"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     

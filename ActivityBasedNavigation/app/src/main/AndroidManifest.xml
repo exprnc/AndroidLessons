@@ -21,6 +21,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".BoxActivity"
+            android:label="Box"
+            android:parentActivityName=".BoxSelectionActivity"/>
+
+        <activity
+            android:name=".OptionsActivity"
+            android:label="Options"
+            android:parentActivityName=".MenuActivity"/>
+
+        <activity
+            android:name=".BoxSelectionActivity"
+            android:label="Select Box"
+            android:parentActivityName=".MenuActivity"/>
+
+        <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:parentActivityName=".MenuActivity"/>
+        
     </application>
 
 </manifest>
