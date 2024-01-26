@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fragmenr Based Navigation</string>
+    <string name="app_name">Fragment Based Navigation</string>
     <string name="screen_label">Screen #%1$d</string>
     <string name="open_box">Open Box</string>
     <string name="options">Options</string>
