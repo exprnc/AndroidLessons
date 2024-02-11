@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Custom Views 1</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="reject">Reject</string>
+    <string name="apply">Apply</string>
+</resources>

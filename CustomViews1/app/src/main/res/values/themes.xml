@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CustomViews1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="materialButtonStyle">@style/MyButtonsStyle</item>
+        
+        <item name="bottomButtonsStyle">@style/DefaultMyButtonsStyle</item>
+
+    </style>
+
+    <style name="Theme.CustomViews1" parent="Base.Theme.CustomViews1" />
+    
+    <style name="MyButtonsStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    
+    <style name="ConcreteMyButtonsStyle">
+        <item name="bottomPositiveBackgroundColor">#008800</item>
+    </style>
+
+    <style name="DefaultMyButtonsStyle">
+        <item name="bottomPositiveBackgroundColor">#880000</item>
+    </style>
+
+    <style name="MyBottomButtonsStyle">
+        <item name="bottomPositiveBackgroundColor">#ff8800</item>
+    </style>
+
+</resources>
