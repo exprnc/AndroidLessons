@@ -60,6 +60,14 @@ class UsersService {
         notifyChanges()
     })
 
+    fun fireUser(user: User): Task<Unit> = SimpleTask<Unit>(Callable {
+        Thread.sleep(2000)
+        val index = users.indexOfFirst { it.id == user.id }
+        if(index == -1) return@Callable
+        users[index].company = ""
+        notifyChanges()
+    })
+
     fun addListener(listener: UsersListener) {
         listeners.add(listener)
         if(loaded) {

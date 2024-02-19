@@ -98,6 +98,19 @@ class UsersListViewModel(
         _actionShowDetails.value = Event(user)
     }
 
+    override fun onUserFire(user: User) {
+        if (isInProgress(user)) return
+        addProgressTo(user)
+        usersService.fireUser(user)
+            .onSuccess {
+                removeProgressFrom(user)
+            }
+            .onError {
+                removeProgressFrom(user)
+                _actionShowToast.value = Event(R.string.cant_fire_user)
+            }
+    }
+
     private fun addProgressTo(user: User) {
         userIdsInProgress.add(user.id)
         notifyUpdates()
